@@ -2,10 +2,10 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzQ_wexPGcZUh
 
 export const saveQuizResult = async (name: string, score: number, reward: string | null) => {
   try {
-    const response = await fetch(GOOGLE_SCRIPT_URL, {
+    await fetch(GOOGLE_SCRIPT_URL, {
       method: "POST",
       // Quan trọng: Google Script yêu cầu gửi dưới dạng text/plain để tránh lỗi CORS phức tạp
-      mode: "no-cors", 
+      mode: "no-cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         Name: name,
@@ -17,7 +17,7 @@ export const saveQuizResult = async (name: string, score: number, reward: string
 
     // Vì dùng mode: 'no-cors' nên response.ok sẽ luôn trả về false 
     // ngay cả khi thành công. Bạn có thể mặc định trả về true.
-    return true; 
+    return true;
   } catch (error) {
     console.error("Google Sheets Save Error:", error);
     return false;

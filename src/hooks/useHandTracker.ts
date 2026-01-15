@@ -5,7 +5,7 @@ import * as cam from "@mediapipe/camera_utils";
 
 export const useHandTracker = (
   webcamRef: React.RefObject<any>,
-  onSwipe: () => void,
+  _onSwipe: () => void,
   onStop: () => void,
   active: boolean
 ) => {
