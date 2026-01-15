@@ -27,7 +27,7 @@ export const ChanceStep = ({
       {/* Header */}
       <div className="text-center">
         <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tight">
-          {reward ? "Chúc mừng!" : "Vẫy tay để dừng!"}
+          {reward ? "Chúc mừng!" : "Dơ tay để dừng!"}
         </h2>
         <p className="text-slate-500 font-medium italic mt-2 h-6">
           {reward 
